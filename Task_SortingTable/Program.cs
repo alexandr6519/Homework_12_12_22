@@ -22,7 +22,7 @@ try
         int[] array1 = ConvertTableToArray(array2);
         SortArray(array1);
         Console.WriteLine("The sorting table is:");
-        PrintArray(cols, array1);
+        PrintArrayAsTable(cols, array1);
     }
 }
 catch
@@ -35,7 +35,7 @@ int[,] CreateAndFillArray(int n, int m)
     int[,] array = new int[n, m];
     for (int i = 0; i < n; i++)
         for (int j = 0; j < m; j++)
-            array[i, j] = new Random().Next(-10, 11);
+            array[i, j] = new Random().Next(-20, 21);
     return array;
 }
 
@@ -76,7 +76,7 @@ int[] ConvertTableToArray(int[,] array)
     return convertArray;
 }
 
-void PrintArray(int rowTable, int[] array)
+void PrintArrayAsTable(int rowTable, int[] array)
 {
     if (array.Length > 0 && rowTable > 0)
     {
