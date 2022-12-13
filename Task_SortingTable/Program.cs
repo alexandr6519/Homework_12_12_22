@@ -19,12 +19,10 @@ try
         int[,] array2 = CreateAndFillArray(rows, cols);
         Console.WriteLine("The random array of {0} rows and {1} columns is:", rows, cols);
         PrintTable(array2);
-        // int[] array1 = ConvertTableToArray(array2);
-        // SortArray(array1);
+        int[] array1 = ConvertTableToArray(array2);
+        SortArray(array1);
         Console.WriteLine("The sorting table is:");
-        //PrintArrayAsTable(cols, array1);
-        SortTable2(array2);
-        PrintTable(array2);
+        PrintArrayAsTable(cols, array1);
     }
 }
 catch
