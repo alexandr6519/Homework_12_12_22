@@ -93,28 +93,3 @@ void PrintArrayAsTable(int rowTable, int[] array)
     }
 }
 
-void SortTable(int[,] array)
-{
-    int rows = array.GetLength(0);
-    int cols = array.GetLength(1);
-    int temp;
-    for (int i = 0; i < rows; i++)
-    {
-        for (int j = 0; j < cols; j++)
-        {
-            for (int k = 0; k < rows; k++)
-            {
-                for (int m = 0; m < cols; m++)
-                {
-                    if (array[i, j] < array[k, m])
-                    {
-                        temp = array[i, j];
-                        array[i, j] = array[k, m];
-                        array[k, m] = temp;
-                    }
-                }
-            }
-        }
-    }
-}
-
