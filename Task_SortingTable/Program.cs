@@ -51,7 +51,7 @@ void PrintTable(int[,] array)
     }
 }
 
-/*void SortArray(int[] array)
+void SortArray(int[] array)
 {
     for (int i = 0; i < array.Length - 1; i++)
     {
@@ -115,25 +115,6 @@ void SortTable(int[,] array)
                         array[k, m] = temp;
                     }
                 }
-            }
-        }
-    }
-}*/
-
-void SortTable2(int[,] array)
-{
-    int rows = array.GetLength(0);
-    int cols = array.GetLength(1);
-
-    for (int i = 0; i < rows * cols - 1; i++)
-    {
-        for (int j = i + 1; j < rows * cols; j++)
-        {
-            if (array[j / cols, j % cols] < array[i / cols, i % cols])
-            {
-                int temp = array[j / cols, j % cols];
-                array[j / cols, j % cols] = array[i / cols, i % cols];
-                array[i / cols, i % cols] = temp;
             }
         }
     }
