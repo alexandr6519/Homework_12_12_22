@@ -10,6 +10,7 @@
 // итераций. И далее в конце опять вывести на экран как таблицу.
 try
 {
+    Console.WriteLine("Enter the size of the table, count of cells must be even");
     Console.WriteLine("Enter the number of rows of the table");
     int rows = Convert.ToInt32(Console.ReadLine());
     Console.WriteLine("Enter the number of columns of the table");
