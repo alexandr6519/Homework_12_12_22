@@ -19,11 +19,8 @@ try
         int[,] array2 = CreateAndFillArray(rows, cols);
         Console.WriteLine("The random array of {0} rows and {1} columns is:", rows, cols);
         PrintTable(array2);
-        // int[] array1 = ConvertTableToArray(array2);
-        // SortArray(array1);
         Console.WriteLine("The sorting table is:");
-        //PrintArrayAsTable(cols, array1);
-        SortTable2(array2);
+        SortTable(array2);
         PrintTable(array2);
     }
 }
@@ -51,76 +48,7 @@ void PrintTable(int[,] array)
     }
 }
 
-/*void SortArray(int[] array)
-{
-    for (int i = 0; i < array.Length - 1; i++)
-    {
-        int indexMinElement = i;
-        for (int j = i + 1; j < array.Length; j++)
-        {
-            if (array[j] < array[indexMinElement])
-                indexMinElement = j;
-        }
-        int temp = array[i];
-        array[i] = array[indexMinElement];
-        array[indexMinElement] = temp;
-    }
-}
-
-int[] ConvertTableToArray(int[,] array)
-{
-    int rows = array.GetLength(0);
-    int cols = array.GetLength(1);
-    int[] convertArray = new int[rows * cols];
-    for (int i = 0; i < cols; i++)
-        for (int j = 0; j < rows; j++)
-            convertArray[i + j * cols] = array[j, i];
-    return convertArray;
-}
-
-void PrintArrayAsTable(int rowTable, int[] array)
-{
-    if (array.Length > 0 && rowTable > 0)
-    {
-        for (int i = 0; i < array.Length; i++)
-        {
-            if (i < array.Length - 1)
-            {
-                if (i % rowTable == 0 && i != 0) Console.WriteLine();
-                Console.Write("{0,4},", array[i]);
-            }
-            else Console.Write("{0,4}.", array[i]);
-        }
-        Console.WriteLine();
-    }
-}
-
 void SortTable(int[,] array)
-{
-    int rows = array.GetLength(0);
-    int cols = array.GetLength(1);
-    int temp;
-    for (int i = 0; i < rows; i++)
-    {
-        for (int j = 0; j < cols; j++)
-        {
-            for (int k = 0; k < rows; k++)
-            {
-                for (int m = 0; m < cols; m++)
-                {
-                    if (array[i, j] < array[k, m])
-                    {
-                        temp = array[i, j];
-                        array[i, j] = array[k, m];
-                        array[k, m] = temp;
-                    }
-                }
-            }
-        }
-    }
-}*/
-
-void SortTable2(int[,] array)
 {
     int rows = array.GetLength(0);
     int cols = array.GetLength(1);
@@ -138,4 +66,3 @@ void SortTable2(int[,] array)
         }
     }
 }
-
